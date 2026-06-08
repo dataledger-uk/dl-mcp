@@ -1,3 +1,4 @@
+import { version } from "../package.json" with { type: "json" };
 import { FastMCP, UserError } from "fastmcp";
 
 import { registerCompanyTools } from "./tools/company.js";
@@ -8,8 +9,7 @@ const httpPort = process.env.DL_MCP_HTTP_PORT ? parseInt(process.env.DL_MCP_HTTP
 
 const server = new FastMCP({
     name: "DataLedger MCP Server",
-    // use version from package.json
-    version: "1.0.0",
+    version: version as `${number}.${number}.${number}`,
     authenticate: async (request) => {
         if (envApiKey) {
             if (transportType !== "stdio") {
