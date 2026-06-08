@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "dataledger": {
+            "command": "npx",
+            "args": [
+                "mcp-remote",
+                "http://localhost:8080/mcp",
+                "--header",
+                "x-api-key:your_api_key_here"
+            ]
+        }
+    }
+}
