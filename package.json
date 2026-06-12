@@ -1,0 +1,27 @@
+{
+  "name": "dl-mcp",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && chmod 755 dist/index.js",
+    "start": "npx tsx src/index.js",
+    "stdio": "DL_MCP_TRANSPORT=stdio npx tsx src/index.ts",
+    "http": "DL_MCP_TRANSPORT=httpStream npx tsx src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "fastmcp": "^4.0.1"
+  },
+  "allowScripts": {
+    "tldjs@2.3.2": true
+  }
+}
